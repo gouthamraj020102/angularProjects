@@ -1,0 +1,15 @@
+.card {
+    width: 250px;               /* Sets the width of the card */
+    padding: 15px;              /* Adds space inside the card around its content */
+    text-align: center;         /* Aligns text and images to the center */
+    border-radius: 10px;        /* Rounds the corners of the card */
+    box-shadow: 2px 2px 5px gray; /* Adds a subtle shadow for a lifted effect */
+    font-family: Arial, sans-serif; /* Uses a clean, readable font with a fallback */
+}
+.card img {
+    width: 100px;             /* Set a fixed width */
+    height: 100px;            /* Set a fixed height */
+    border-radius: 50%;       /* Makes the image perfectly round */
+    object-fit: cover;        /* Crops the image to fill the circle */
+    margin-bottom: 10px;      /* Adds space below the image */
+}
