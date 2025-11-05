@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './profile-card.component.css'
 })
 export class ProfileCardComponent {
-
+  name = 'Raj Manapuram';
+  title = 'Web Developer';
 }
