@@ -1,27 +1,40 @@
-# ProfileCardApp
+# 📇 ProfileCardApp
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+**ProfileCardApp** is a beginner-friendly Angular application that displays a user profile card. It was generated using the [Angular CLI](https://github.com/angular/angular-cli) version **17.2.1**, following a modular architecture without routing.
 
-## Development server
+---
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## 🛠️ Project Setup
 
-## Code scaffolding
+To create this project, run the following command:
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+```bash
+ng new "profile-card-app" --no-standalone --routing=false
+cd profile-card-app
+```
 
-## Build
+## 🚀 Getting Started
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### 1. Generate a Component
 
-## Running unit tests
+Create a new component named `profile-card`:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+```bash
+ng generate component profile-card
+```
 
-## Running end-to-end tests
+### 2. Serve the App Locally
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+Start the development server:
 
-## Further help
+```bash
+ng serve
+```
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Then open your browser and navigate to:
+
+```
+http://localhost:4200/
+```
+
+The app will automatically reload when you make changes to the source files.
