@@ -33,6 +33,7 @@
     align-items: stretch;
 }
 .card {
+    flex-grow: 1;
     background-color: white;
     padding: 70px 50px 0px 50px;
     width: 25%;
