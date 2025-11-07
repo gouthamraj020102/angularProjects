@@ -1,5 +1,27 @@
-<div class="card">
-    <img src="assets/Billa.jpg" alt="Prabhas" />
-    <h2>{{ name }}</h2>
-    <p>{{ title }}</p>
+<div class="page-container">
+    <div class="container">
+        <img src="assets/logo.svg" alt="Company Logo" class="company-logo" />
+        <p>{{title}}</p>
+        <h1>{{subTitle}}</h1>
+        <div class="navigation-wrapper">
+            <i class="fa-solid fa-chevron-left nav-icon" (click)="prevGroup()" [class.disabled]="page === 0"></i>
+            <div class="wrapper">
+                <div *ngFor="let member of visibleMembers" class="card">
+                    <div class="profile-img">
+                        <img [src]="member.image" [alt]="member.name" />
+                    </div>
+                    <div class="content">
+                        <h3>{{ member.name }}</h3>
+                        <p>{{ member.title }}</p>
+                        <div class="social-media">
+                            <i class="fa-brands fa-square-linkedin"></i>
+                            <i class="fa-brands fa-youtube"></i>
+                            <i class="fa-brands fa-facebook"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <i class="fa-solid fa-chevron-right nav-icon" (click)="nextGroup()" [class.disabled]="(page + 1) * 5 >= teamMembers.length"></i>
+        </div>
+    </div>
 </div>

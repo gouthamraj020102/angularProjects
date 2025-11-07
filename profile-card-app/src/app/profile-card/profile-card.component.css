@@ -1,15 +1,108 @@
-.card {
-    width: 250px;               /* Sets the width of the card */
-    padding: 15px;              /* Adds space inside the card around its content */
-    text-align: center;         /* Aligns text and images to the center */
-    border-radius: 10px;        /* Rounds the corners of the card */
-    box-shadow: 2px 2px 5px gray; /* Adds a subtle shadow for a lifted effect */
-    font-family: Arial, sans-serif; /* Uses a clean, readable font with a fallback */
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
-.card img {
-    width: 100px;             /* Set a fixed width */
-    height: 100px;            /* Set a fixed height */
-    border-radius: 50%;       /* Makes the image perfectly round */
-    object-fit: cover;        /* Crops the image to fill the circle */
-    margin-bottom: 10px;      /* Adds space below the image */
+.page-container {
+    height: 98vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ebeaea;
+}
+.company-logo {
+    display: block;
+    margin: 0 auto;
+    width: 350px;
+}
+.container p {
+    text-align: center;
+    margin: 30px 0px 10px 0px;
+    color: rgba(0,0,0,0.6);
+    letter-spacing: 2px;
+    font-weight: bold;
+}
+.container h1 {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+}
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+}
+.card {
+    background-color: white;
+    padding: 70px 50px 0px 50px;
+    width: 25%;
+    max-width: 350px;
+    margin: 10px;
+    border-radius: 10px;
+}
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: auto;
+}
+.profile-img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.content {
+    text-align: center;
+}
+.content h3 {
+    font-size: 1.4rem;
+    margin-top: 25px;
+    color: rgba(0,0,0,0.9);
+}
+.content p {
+    color: rgba(0,0,0,0.7);
+    letter-spacing: 1px;
+    margin-top: 15px;
+}
+.social-media {
+    margin-top: 30px;
+}
+.navigation-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.nav-icon {
+  font-size: 2rem;
+  color: rgba(0, 0, 0, 0.7);
+  cursor: pointer;
+  padding: 10px;
+  transition: color 0.3s ease;
+}
+
+.nav-icon:hover {
+  color: rgba(0, 0, 0, 0.9);
+}
+
+.nav-icon.disabled {
+  color: rgba(0, 0, 0, 0.3);
+  pointer-events: none;
+}
+.social-media i {
+    font-size: 1.2rem;
+    color: rgba(0,0,0,0.8);
+    background-color: #ebeaea;
+    padding: 15px 30px 15px 10px;
+    margin: 0 3px;
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    transition: 0.5;
+    cursor: pointer;
+}
+.social-media i:hover {
+    background-color: #dddddd;
+    color: rgba(0,0,0,0.9);
 }
