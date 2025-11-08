@@ -4,7 +4,17 @@
         <p>{{title}}</p>
         <h1>{{subTitle}}</h1>
         <div class="navigation-wrapper">
-            <i class="fa-solid fa-chevron-left nav-icon" (click)="prevGroup()" [class.disabled]="page === 0"></i>
+
+            <!-- Left navigation button -->
+            <button
+                *ngIf="page > 0"
+                class="nav-button"
+                (click)="prevGroup()"
+                (keydown.enter)="prevGroup()"
+                aria-label="Previous group">
+                <i class="fa-solid fa-chevron-left nav-icon"></i>
+            </button>
+
             <div class="wrapper">
                 <div *ngFor="let member of visibleMembers" class="card">
                     <div class="profile-img">
@@ -21,7 +31,17 @@
                     </div>
                 </div>
             </div>
-            <i class="fa-solid fa-chevron-right nav-icon" (click)="nextGroup()" [class.disabled]="(page + 1) * 5 >= teamMembers.length"></i>
+
+            <!-- Right navigation button -->
+            <button
+                *ngIf="(page + 1) * 5 < teamMembers.length"
+                class="nav-button"
+                (click)="nextGroup()"
+                (keydown.enter)="nextGroup()"
+                aria-label="Next group">
+                <i class="fa-solid fa-chevron-right nav-icon"></i>
+            </button>
+
         </div>
     </div>
 </div>
