@@ -16,4 +16,8 @@ export class AppComponent {
   array2 = [100, 200, 300, 400, 500];
 
   data!: string;
+
+  updateData(e: string) {
+    this.data = e;
+  }
 }
