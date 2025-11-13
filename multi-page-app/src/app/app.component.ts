@@ -7,4 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'multi-page-app';
+  parentMessage = 'Hello from Parent Component!';
 }
