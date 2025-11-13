@@ -4,9 +4,4 @@
 <div *ngFor="let arr of array">
     {{arr}}
 </div>
-
-<button (click)="passToParent()">Send</button>
-
-<input type="text" (input)="updateCustomEventMessage($event)">
-
-<div>Child Input: {{message}}</div>
+<input type="text" [(ngModel)]="childData">

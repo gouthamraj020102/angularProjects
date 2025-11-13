@@ -1,5 +1,12 @@
-<div>Child data: {{data}}</div>
-
 <div>
-  <app-header (customEvent)="updateData($event)"></app-header>
+  Parent: {{child.childData}}
+</div>
+<div>
+  {{child.demo()}}
+</div>
+<div>
+  <app-header #child></app-header>
+</div>
+<div>
+  Parent:{{child.title}}
 </div>

@@ -13,6 +13,13 @@ export class HeaderComponent {
   @Output() customEvent = new EventEmitter;
   message = "passed to parent";
 
+  childData = "this is demo component communication";
+  title = "Child to Parent communication";
+
+  demo() {
+    return "Hello world!";
+  }
+
   passToParent() {
     this.customEvent.emit(this.message);
   }
