@@ -7,4 +7,6 @@ import { Component, Input } from '@angular/core';
 })
 export class HeaderComponent {
   @Input() childMessage!: string;  // Receives value from parent
+  @Input() data: any;
+  @Input() array: any;
 }
