@@ -1,12 +1,5 @@
-<div class="parent-title">
-  {{ title }}
-</div>
+<div>Child data: {{data}}</div>
+
 <div>
-  <app-header class="header-title" [childMessage]="parentMessage"></app-header>
-</div>
-<div>
-  <app-header style="color: blueviolet" [data]="data1" [array]="array1"></app-header>
-</div>
-<div>
-  <app-header style="color: crimson;" [data]="data2" [array]="array2"></app-header>
+  <app-header (customEvent)="data=$event"></app-header>
 </div>

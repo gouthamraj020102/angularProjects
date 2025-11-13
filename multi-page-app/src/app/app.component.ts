@@ -14,4 +14,6 @@ export class AppComponent {
 
   data2 = "This is demo of inpur decorator - Array2";
   array2 = [100, 200, 300, 400, 500];
+
+  data!: string;
 }
