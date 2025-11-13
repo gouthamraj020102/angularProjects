@@ -14,7 +14,11 @@ export class HeaderComponent {
   message = "passed to parent";
 
   childData = "this is demo component communication";
-  title = "Child to Parent communication";
+  title = "Child to Parent";
+
+  passTitleToParent() {
+    return this.title;
+  }
 
   demo() {
     return "Hello world!";
