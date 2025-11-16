@@ -2,6 +2,14 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
 
+# Pipes in Angular
+
+To read more about angular built-in pipes: [Date](https://angular.io/api/common/DatePipe) | [Decimal](https://v17.angular.io/api/common/DecimalPipe) | [Currency](https://v17.angular.io/api/common/CurrencyPipe) | [Percent](https://v17.angular.io/api/common/PercentPipe)
+
+Please note : If you get errors, chances are that your date is not in `mm/dd/yyyy` format. To fix this error please change the date format or create a custom pipe
+
+InvalidPipeArgument: '14/10/1980' for pipe 'DatePipe'
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.

@@ -1,7 +1,36 @@
-{{childMessage}}
-
-{{data}}
-<div *ngFor="let arr of array">
-    {{arr}}
+<div *ngFor="let arr of arrayWithName" style="color: blueviolet;">
+    {{arr | lowercase}}
 </div>
-<input type="text" [(ngModel)]="title">
+<div *ngFor="let arr of arrayWithName" style="color: crimson;">
+    {{arr | uppercase}}
+</div>
+
+<div style="color: green;">{{dateOfBirth}}</div>
+<div style="color: cadetblue;">{{dateOfBirth | date:'fullDate'}}</div>
+<div style="color: chocolate;">{{dateOfBirth | date:'fullDate' | uppercase}}</div> <!--chain pipes-->
+<div style="color: blue;">{{dateOfBirth | date:'dd/MM/yyyy'}}</div>
+
+<div>{{annualSalary | currency:'USD'}}</div>
+<div style="color: yellowgreen;">{{annualSalary | currency:'INR':true:'1.3-4'}}</div>
+
+<div style="color: brown;">{{number | percent}}</div>
+
+<div style="color: green;">{{person | json}}</div>
+
+<div style="color: burlywood;">{{company | slice:9:23}}</div>
+<div style="color: orangered;">{{company}}</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.employeeName | employeeTitle:employee.gender}}</td>
+            <td>{{employee.gender}}</td>
+        </tr>
+    </tbody>
+</table>
