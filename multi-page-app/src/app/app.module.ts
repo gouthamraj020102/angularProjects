@@ -5,14 +5,17 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { FormsModule } from '@angular/forms';
 import { EmployeeTitlePipe } from './pipes/employeeTitle.pipe';
+import { AppRoutingModule, routingComponents } from './app-routing.module';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    EmployeeTitlePipe
+    EmployeeTitlePipe,
+    routingComponents
   ],
   imports: [
+    AppRoutingModule,
     BrowserModule,
     FormsModule
   ],
