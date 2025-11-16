@@ -1,0 +1,13 @@
+<div class="page-container">
+    <h2 class="characters-title">Ben 10 Characters</h2>
+    <div class="powers-header">
+        <a routerLink="/home" class="back-link">← Back to Home</a>
+    </div>
+    <div class="characters-container">
+        <div class="character-card" *ngFor="let char of characters" [routerLink]="['/powers', char.name]">
+            <img [src]="char.imageUrl" alt="char.name" class="character-image" />
+            <h3>{{ char.name }}</h3>
+            <p>{{ char.description }}</p>
+        </div>
+    </div>
+</div>
