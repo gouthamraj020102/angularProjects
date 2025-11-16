@@ -16,6 +16,13 @@ export class HeaderComponent {
   @Input() person: any;
   @Input() company: any;
 
+  employees= [
+    { employeeName: 'Gowtham', gender: 'Male'},
+    { employeeName: 'Deepak', gender: 'Male'},
+    { employeeName: 'Preethi', gender: 'Female'},
+    { employeeName: 'Suneela', gender: 'Female'}
+  ];
+
   @Output() customEvent = new EventEmitter;
   message = "passed to parent";
 

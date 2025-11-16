@@ -19,3 +19,18 @@
 
 <div style="color: burlywood;">{{company | slice:9:23}}</div>
 <div style="color: orangered;">{{company}}</div>
+
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Gender</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{employee.employeeName | employeeTitle:employee.gender}}</td>
+            <td>{{employee.gender}}</td>
+        </tr>
+    </tbody>
+</table>
