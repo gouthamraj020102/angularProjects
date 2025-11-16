@@ -7,7 +7,7 @@ import { PowersComponent } from "./powers/powers.component";
 const routes: Routes = [
     { path: '', component: HomeComponent },
     { path: 'characters', component: CharactersComponent },
-    { path: 'powers', component: PowersComponent },
+    { path: 'powers/:name', component: PowersComponent },
     { path: '**', redirectTo: '' }
 ];
 
