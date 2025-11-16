@@ -9,6 +9,12 @@ export class HeaderComponent {
   @Input() childMessage!: string;  // Receives value from parent
   @Input() data: any;
   @Input() array: any;
+  @Input() arrayWithName: any;
+  @Input() dateOfBirth: any;
+  @Input() annualSalary: any;
+  @Input() number: any;
+  @Input() person: any;
+  @Input() company: any;
 
   @Output() customEvent = new EventEmitter;
   message = "passed to parent";

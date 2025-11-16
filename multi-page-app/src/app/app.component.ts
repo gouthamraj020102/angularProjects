@@ -18,6 +18,18 @@ export class AppComponent {
 
   data!: string;
 
+  name = ['Gowtham', 'Raju', 'Manapuram'];
+  dob = '06/02/2002';
+  salary = 6000.44999;
+  num = 0.98;
+  companyName = 'Software Tech Solutions Ltd';
+
+  person1 = {
+    'name': "gowtham",
+    'age': "23",
+    "salary": 6000.44999
+  }
+
   updateData(e: string) {
     this.data = e;
   }
