@@ -1,0 +1,23 @@
+<div class="page-container">
+
+    <h2 class="characters-title">{{ name | pageTitleFormatter }}</h2>
+
+    <div class="back-navigation">
+        <a [routerLink]="backLinkRoute" class="back-link">← {{ backLinkText }}</a>
+    </div>
+
+    <ng-container *ngIf="items && items.length > 0; else noItems">
+        <div class="characters-container">
+            <div class="character-card" *ngFor="let item of items" [routerLink]="[targetRoute, item.name]">
+                <img [src]="item.imageUrl" alt="{{ item.name }}" class="character-image" />
+                <h3>{{ item.name }}</h3>
+                <p *ngIf="item.description">{{ item.description }}</p>
+            </div>
+        </div>
+    </ng-container>
+
+    <ng-template #noItems>
+        <p class="no-items">{{ name | emptyMessageFormatter | uppercase}}</p>
+    </ng-template>
+
+</div>
