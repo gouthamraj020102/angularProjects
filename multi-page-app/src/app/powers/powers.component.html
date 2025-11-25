@@ -1,23 +1,7 @@
-<div class="powers-page">
-    <h2 class="page-title">
-        {{ characterName ? characterName + "'s Powers" : 'Powers' }}
-    </h2>
-
-    <div class="powers-header">
-        <a routerLink="/characters" class="back-link">← Back to Characters</a>
-    </div>
-
-    <div *ngIf="powers && powers.length > 0; else noPowers">
-        <div class="powers-container">
-            <div class="power-card" *ngFor="let power of powers">
-                <img [src]="power.imageUrl" alt="power.name" class="power-image" />
-                <h3>{{ power.name }}</h3>
-                <!-- <p>{{ power.description }}</p> -->
-            </div>
-        </div>
-    </div>
-
-    <ng-template #noPowers>
-        <p class="no-powers">No powers found for {{ characterName }}.</p>
-    </ng-template>
-</div>
+<app-my-shared-component
+    [backLinkText]="previousLinkText"
+    [backLinkRoute]="previousLinkRoute"
+    [targetRoute]="nextPageRoute"
+    [items]="powers"
+    [name]="characterName">
+</app-my-shared-component>
