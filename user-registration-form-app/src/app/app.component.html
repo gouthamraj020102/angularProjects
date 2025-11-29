@@ -1,24 +1,29 @@
 <div class="form">
   <h2 id="registration">Registration Form</h2>
   <form (ngSubmit)="onSubmit()" #myForm="ngForm">
-    <label for="fname">First Name</label>
-    <input type="text" name="fname" id="fname" placeholder="Your name.." [(ngModel)]="firstname" required #fname="ngModel">
-    <div>
-      <small *ngIf="fname.invalid && fname.touched">First Name is a required field</small>
-      <span *ngIf="firstname">You entered {{firstname}}</span>
-    </div>
+    <div ngModelGroup="personDetails" #personDetail="ngModelGroup">
+      <label for="fname">First Name</label>
+      <input type="text" name="fname" id="fname" placeholder="Your name.." [(ngModel)]="firstname" required #fname="ngModel">
+      <!-- <div>
+        <small *ngIf="fname.invalid && fname.touched">First Name is a required field</small>
+        <span *ngIf="firstname">You entered {{firstname}}</span>
+      </div> -->
 
-    <label for="lname">Last Name</label>
-    <input type="text" name="lname" id="lname" placeholder="Your last name.." [(ngModel)]="lastname" required #lname="ngModel">
-    <div>
-      <small *ngIf="lname.invalid && lname.touched">Last Name is a required field</small>
-      <span *ngIf="lastname">You entered {{lastname}}</span>
-    </div>
+      <label for="lname">Last Name</label>
+      <input type="text" name="lname" id="lname" placeholder="Your last name.." [(ngModel)]="lastname" required #lname="ngModel">
+      <!-- <div>
+        <small *ngIf="lname.invalid && lname.touched">Last Name is a required field</small>
+        <span *ngIf="lastname">You entered {{lastname}}</span>
+      </div> -->
 
-    <label for="email">Email</label>
-    <input type="email" name="email" id="email" name="email" placeholder="Your email.." ngModel required email #email="ngModel">
-    <div>
-      <small *ngIf="email.invalid && email.touched">Provide valid email</small>
+      <label for="email">Email</label>
+      <input type="email" name="email" id="email" name="email" placeholder="Your email.." ngModel required email #email="ngModel">
+      <!-- <div>
+        <small *ngIf="email.invalid && email.touched">Provide valid email</small>
+      </div> -->
+      <div>
+        <small *ngIf="personDetail.invalid && personDetail.touched">Some of the required fields does not have valid value.</small>
+      </div>
     </div>
 
     <label for="country">Country</label>
