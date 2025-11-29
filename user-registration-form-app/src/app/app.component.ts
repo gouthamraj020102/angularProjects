@@ -8,6 +8,9 @@ import { NgForm } from '@angular/forms';
 })
 export class AppComponent {
   title = 'user-registration-form-app';
+  defaultCountry = 'india';
+  firstname: string | undefined;
+  lastname: string | undefined;
   @ViewChild('myForm') form: NgForm | undefined;
 
   onSubmit() {

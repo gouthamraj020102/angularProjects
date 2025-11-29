@@ -19,8 +19,14 @@ input[type=submit] {
     cursor: pointer;
 }
 
-input[type=submit]:hover {
-    background-color: #45a049;
+#btn:hover:enabled {
+  background-color: #45a049;
+}
+
+#btn:disabled {
+    background-color: grey;
+    color: #ccc;
+    cursor: not-allowed;
 }
 
 .form {
@@ -29,4 +35,12 @@ input[type=submit]:hover {
     padding: 20px;
     width: 400px;
     margin: 30px auto;
+}
+
+input.ng-invalid.ng-touched {
+    border: red 1px solid;
+}
+
+small {
+    color: red;
 }
