@@ -11,6 +11,9 @@ export class AppComponent {
   defaultCountry = 'india';
   firstname: string | undefined;
   lastname: string | undefined;
+  email: string | undefined;
+  gen: string | undefined;
+  country: string | undefined;
 
   defaultGender = 'Male';
   gender = [
@@ -23,11 +26,18 @@ export class AppComponent {
 
   onSubmit() {
     console.log(this.form);
+    this.firstname = this.form?.value.personDetails.firstname;
+    this.lastname = this.form?.value.personDetails.lastname;
+    this.email = this.form?.value.personDetails.email;
+    this.gen = this.form?.value.gender;
+    this.country = this.form?.value.country;
+
+    this.form?.reset();
   }
 
   setDefaultValues() {
-    // this.form.value.personDetails.fname = 'Gowtham';
-    // this.form.value.personDetails.lname = 'Raj';
+    // this.form.value.personDetails.firstname = 'Gowtham';
+    // this.form.value.personDetails.lastname = 'Raj';
     // this.form.value.personDetails.email = 'gowtham.raj@gmail.com';
 
     // this.form?.setValue({
@@ -35,16 +45,16 @@ export class AppComponent {
     //   gender: '',
     //   hobbies: '',
     //   personDetails: {
-    //     fname: 'Gowtham',
-    //     lname: 'Raj',
+    //     firstname: 'Gowtham',
+    //     lastname: 'Raj',
     //     email: 'gowtham.raj@gmail.com'
     //   }
     // });
 
     this.form?.form.patchValue({
       personDetails: {
-        fname: 'Gowtham',
-        lname: 'Raj',
+        firstname: 'Gowtham',
+        lastname: 'Raj',
         email: 'gowtham.raj@gmail.com'
       }
     });
