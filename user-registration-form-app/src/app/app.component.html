@@ -24,6 +24,8 @@
       <div>
         <small *ngIf="personDetail.invalid && personDetail.touched">Some of the required fields does not have valid value.</small>
       </div>
+
+      <button (click)="setDefaultValues()">Set Default Values</button>
     </div>
 
     <label for="country">Country</label>
@@ -49,6 +51,6 @@
       <label><input type="checkbox" value="music" name="hobbies" ngModel> Music</label>
     </div>
 
-    <input type="submit" value="Submit" id="btn" [disabled]="!myForm.valid">
+    <input type="submit" value="Submit" id="btn">
   </form>
 </div>
