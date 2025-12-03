@@ -12,9 +12,11 @@ export class ReactiveFormsComponent implements OnInit {
 
   ngOnInit() {
     this.reactiveForm = new FormGroup({
-      firstname: new FormControl(null, [Validators.required, Validators.minLength(5)]),
-      lastname: new FormControl(null, [Validators.required, Validators.minLength(3)]),
-      email: new FormControl(null, [Validators.required, Validators.email]),
+      personalDetails: new FormGroup({
+        firstname: new FormControl(null, [Validators.required, Validators.minLength(5)]),
+        lastname: new FormControl(null, [Validators.required, Validators.minLength(3)]),
+        email: new FormControl(null, [Validators.required, Validators.email])
+      }),
       gender: new FormControl('male'),
       country: new FormControl('india'),
       hobbies: new FormControl(null)
