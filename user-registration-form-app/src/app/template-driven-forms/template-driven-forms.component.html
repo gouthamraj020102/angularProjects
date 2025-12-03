@@ -1,0 +1,55 @@
+<div class="form">
+    <h2 id="registration">Registration Form</h2>
+    <form (ngSubmit)="onSubmit()" #myForm="ngForm">
+        <div ngModelGroup="personDetails" #personDetail="ngModelGroup">
+            <label for="fname">First Name</label>
+            <input type="text" name="firstname" id="fname" placeholder="Your name.." ngModel required>
+
+            <label for="lname">Last Name</label>
+            <input type="text" name="lastname" id="lname" placeholder="Your last name.." ngModel required>
+
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" name="email" placeholder="Your email.." ngModel required email>
+
+            <div>
+                <small *ngIf="personDetail.invalid && personDetail.touched">Some of the required fields does not have valid value.</small>
+            </div>
+
+            <button (click)="setDefaultValues()">Set Default Values</button>
+        </div>
+
+        <label for="country">Country</label>
+        <select id="country" name="country" [ngModel]="defaultCountry">
+            <option value="australia">Australia</option>
+            <option value="canada">Canada</option>
+            <option value="usa">USA</option>
+            <option value="india">India</option>
+            <option value="uk">UK</option>
+        </select>
+
+        <label for="gender">Gender:</label>
+        <span *ngFor="let gen of gender">
+            <input type="radio" id="{{gen.id}}" value="{{gen.value}}" name="gender" [ngModel]="defaultGender">
+            <label for="{{gen.id}}">{{gen.value}}</label>
+        </span>
+        <br><br>
+
+        <label>Hobbies <i>(Optional)</i></label>
+        <div class="form-inline">
+            <label><input type="checkbox" value="sports" name="hobbies" ngModel> Sports</label>
+            <label><input type="checkbox" value="movies" name="hobbies" ngModel> Movies</label>
+            <label><input type="checkbox" value="music" name="hobbies" ngModel> Music</label>
+        </div>
+
+        <input type="submit" value="Submit" id="btn">
+    </form>
+</div>
+
+<div class="form-data">
+    <h2>Form Data</h2>
+    <p>First Name: <b>{{firstname}}</b></p>
+    <p>Last Name: <b>{{lastname}}</b></p>
+    <p>Email: <b>{{email}}</b></p>
+    <p>Country: <b>{{country}}</b></p>
+    <p>Gender: <b>{{gen}}</b></p>
+</div>
